@@ -1,13 +1,293 @@
+
 <!DOCTYPE html>
 <html>
 <head>
 
+  <title> Alvin Dang | Growth Marketer</title>
+  <meta name="Keywords" content="Alvin Dang, Toronto, Ontario, Canada, GTA, Shopify, BlackBerry, Email, CRM, marketer, email marketer, digital marketer, growth">
+  <meta name="Description" content="Digital Marketer, helping grow entrepreneurship at Shopify."/>
+  <meta name="abstract" content="Digital Marketer, currently growing entrepreneurship at Shopify." />
+  <meta http-equiv="Content-Language" content="EN" />
+  <meta name="author" content="Alvin Dang" />
+  <meta name="distribution" content="Global" />
+  <meta name="revisit-after" content="1 days" />
+  <meta name="robots" content="FOLLOW,INDEX, NOODP" />
+  <meta name='viewport' content='width=device-width; initial-scale=1.0;' />
+  <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
+  <script type="text/javascript" src="instafeed.min.js"></script>
+  <script src="http://use.typekit.net/kjx8ypz.js"></script>
+  <script>try{Typekit.load();}catch(e){}</script>
+
+  
+  <style type='text/css'>
+
+  /* entypo */
+  body {
+      font-family: proxima-nova, sans-serif;
+      background: #000;
+  }
+    a {
+      text-decoration: none;
+      color: #dd4830;
+    }
+    #whoami p {
+      opacity: 0;
+      margin-top: 25px;
+      font-size: 1.5em;
+      text-align: left;
+      z-index: 9999;
+      position: absolute;
+      color: #fff;
+      top: 100px;
+      left: 100px;
+      width: 40%;
+      font-weight: 200;
+      line-height: 1.4em;
+    }
+
+    #bg {
+      position:fixed; 
+      top:-50%; 
+      left:-50%; 
+      width:200%; 
+      height:200%;
+      background: #000;
+    }
+    #bg img {
+      position:absolute; 
+      top:0; 
+      left:0; 
+      right:0; 
+      bottom:0; 
+      margin:auto; 
+      min-width:50%;
+      min-height:50%;
+      opacity: .4;
+    }
+    #caption {
+      z-index: 99999999;
+      color: rgba(255,255,255,1);
+      font-size: 16px;
+      position: absolute;
+      bottom: 50px;
+      right: 50px;
+      text-shadow: 0 1px 1px #000;
+      line-height: .9em;
+      font-family: helvetica neue;
+      font-weight: 200;
+      width: 50%;
+      text-align: right;
+      line-height: 1.3em;
+    }
+    .next {
+      position: fixed;
+      top: 30%;
+      right: 0;
+      font-size: 150%;
+      color: #fff;
+      background: rgba(0,0,0,.5);
+      margin: 1%;
+      border-radius: 400px;
+      padding: 1em;
+      line-height: .5em;
+      cursor: pointer;
+    }
+     .prev {
+     position: fixed;
+      top: 30%;
+      left: 0;
+      font-size: 150%;
+      color: #fff;
+      background: rgba(0,0,0,.5);
+      margin: 1%;
+      border-radius: 400px;
+      padding: 1em;
+      line-height: .5em;
+      cursor: pointer;
+    }
+    /* colors  I stole from Layer Vault because they own all the color in the world */
+    .green {color:#de5267;}
+    .tomato {color:#de5267;}
+    .sky {color:#de5267;}
+    .mustard {color:#de5267;}
+
+    ::selection {
+     background: #222; /* Safari */
+    }
+    ::-moz-selection {
+      background: #222; /* Firefox */
+    }
+
+   @media only screen and (max-device-width: 480px), only screen and (min-device-width: 560px) and (max-device-width: 1136px) and (-webkit-min-device-pixel-ratio: 2) {
+    /* iPhone only */
+      #whoami p {
+      opacity: 0;
+      margin: 2em;
+      font-size: 1.4em;
+      text-align: left;
+      z-index: 9999;
+      position: relative;
+      color: #fff;
+      top: .5em;
+      left: .2em;
+      width: 80%;
+      weight: bold;
+      display: inline-block;
+      padding: 0 0 100px 0;
+    }
+     .next {
+      position: fixed;
+      top: 2%;
+      right: 0;
+      font-size: 150%;
+      color: #fff;
+      background: rgba(0,0,0,.5);
+      margin: 1%;
+      border-radius: 400px;
+      padding: 1em;
+      line-height: .5em;
+      cursor: pointer;
+    }
+     .prev {
+      position: fixed;
+      top: 2%;
+      left: 0;
+      font-size: 150%;
+      color: #fff;
+      background: rgba(0,0,0,.5);
+      margin: 1%;
+      border-radius: 400px;
+      padding: 1em;
+      line-height: .5em;
+      cursor: pointer;
+    }
+    #caption {
+      z-index: 99999999;
+      color: rgba(255,255,255,1);
+      font-size: 16px;
+      position: relative;
+      left: 50px;
+      text-shadow: 0 1px 1px #000;
+      line-height: .9em;
+      font-family: helvetica neue;
+      font-weight: 200;
+      width: 75%;
+      text-align: left;
+      line-height: 1.3em;
+    }
+   }
+  </style>
+  
+
+  <!-- soft load the bio -->
+  <script type='text/javascript'>//<![CDATA[ 
+    $(window).load(function(){
+    $("#whoami p").delay(1000).animate({"opacity": "1"}, 700);
+    });//]]>  
+  </script>
+
+
+  
+
 </head>
+
 <body>
+  <div id="whoami">
+    <p>
+      Hi there. 
+      
+      <br><br>
+     My name is Alvin Dang.
+
+     <br><br>
+     Currently, at <a href="https://www.shopify.com" class="green">Shopify</a> focused on growth via email and other digital messaging channels. 
+
+      <br><br>
+      In the past, email marketing for <a href="https://www.ariad.ca" class="tomato">Ariad Communications</a> and <a href="https://www.blackberry.com" class="tomato">BlackBerry</a>. My history is on <a href="https://www.linkedin.com/in/alvindang/" class="sky">LinkedIn</a>.
+     
+      
+      <br><br>
+     You should follow me on <a href="http://instagram.com/alvin.dang" class="mustard">Instagram</a> where I share photos of fits, sneakers and my life. <a class="follow-twitter mustard" href=" http://twitter.com/alvindang" onclick="window.open('https://twitter.com/intent/follow?screen_name=alvindang&amp;source=followbutton&amp;variant=1.0','FollowAddThis','width=520,height=520');return false;">Twitter</a> if you want to hear my frustrations as a lifelong Toronto Raptors fan. 
+
+      <br><br>
+      <!-- make it hard for spiders to get my email -->
+      <script language=javascript>
+        <!-- 
+        var showtag="@"
+        var showlink="Contact Me";
+        var showname="alvin";
+        var showhost="alvindang.com";
+        document.write("<a href="+"mail"+"to:"+showname+showtag+showhost+" "+"class='mustard'"+">"+showlink+"</a>")
+        //-->
+      </script>
+    </p>
+  </div>
+
+  <!-- instagram photo become the background -->
+  <div id="instafeed"></div>
+ <div class="controls">
+  <div class="prev entypo-left-open-big"></div>
+  <div class="next entypo-right-open-big"></div>
+
+  <!-- Grab My Latest Instagram Photo -->
+  <script type="text/javascript">
 
 
-Hi there.
+feed = new Instafeed({
+   get: 'user',
+        userId: 141970,
+        accessToken: '141970.467ede5.edbc9c37472d41b790e1db8948793f11',
+        sortby: 'random',
+        resolution: 'standard_resolution',
+        links: 'false',
+        limit: '10',
+        template: '<div id="caption">{{caption}} <br>{{likes}} likes on my <a href="http://instagram.com/alvin.dang" class="sky">instagram</a></div><div id="bg"><img src="{{image}}" /></div>',
+  mock: true,
+  custom: {
+    images: [],
+    currentImage: 0,
+    showImage: function () {
+      var result, image;
+      image = this.options.custom.images[this.options.custom.currentImage];
+      result = this._makeTemplate(this.options.template, {
+        model: image,
+        id: image.id,
+        link: image.link,
+        image: image.images[this.options.resolution].url,
+        caption: this._getObjectProperty(image, 'caption.text'),
+        likes: image.likes.count,
+        comments: image.comments.count,
+        location: this._getObjectProperty(image, 'location.name')
+      });
+      $("#instafeed").html(result);
+    }
+  },
+  success: function (data) {
+    this.options.custom.images = data.data; 
+    this.options.custom.showImage.call(this);
+  }
+});
+feed.run();
 
+$(".next").click(function () {
+  var length, current;
+  current = feed.options.custom.currentImage;
+  length = feed.options.custom.images.length;
+  if (current < length - 1) {
+    feed.options.custom.currentImage++;
+    feed.options.custom.showImage.call(feed);
+  }
+});
 
+$(".prev").click(function () {
+  var length, current;
+  current = feed.options.custom.currentImage;
+  length = feed.options.custom.images.length;
+  if (current > 0) {
+    feed.options.custom.currentImage--
+    feed.options.custom.showImage.call(feed);
+  }
+});
+  </script>
 </body>
 </html>

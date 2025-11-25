@@ -156,7 +156,7 @@ The site uses a consistent brand color: `#0C6E99` (teal/blue)
 
 **Location**: `index.html:153`
 ```html
-I'm an experienced lifecycle, marketing & product growth leader, currently building the lifecycle marketing & product growth teams at <a href="https://www.joinhomebase.com" class="green">Homebase</a>.
+I'm an experienced lifecycle, marketing & product growth leader, currently building the lifecycle marketing & product growth teams at <a href="https://relayfi.com/" class="green">Relay</a>.
 ```
 
 ### Update Social Media Links
@@ -270,8 +270,8 @@ When appropriate, consider suggesting:
 When updating professional information, current structure includes:
 
 - **Name**: Alvin Dang
-- **Current Role**: Lifecycle marketing & product growth at Homebase
-- **Previous Roles**: Wealthsimple, Shopify, Ariad Communications, BlackBerry
+- **Current Role**: Lifecycle marketing & product growth at Relay
+- **Previous Roles**: Homebase, Wealthsimple, Shopify, Ariad Communications, BlackBerry
 - **Location**: Toronto, Ontario, Canada
 - **Availability**: Open for select consulting/freelance
 

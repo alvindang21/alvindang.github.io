@@ -16,13 +16,12 @@ This is a personal portfolio website for Alvin Dang, a lifecycle marketing and p
 alvindang.github.io/
 ├── index.html          # Main portfolio page (single-page application)
 ├── CNAME               # Custom domain configuration (alvindang.com)
-├── CNAME.html          # Duplicate CNAME file (unclear purpose)
 ├── _config.yml         # Jekyll configuration for GitHub Pages
 ├── README.md           # Repository description (minimal)
-├── img/                # Images directory
-│   ├── favicon.png     # Site favicon (referenced but may be missing)
-│   └── lul.html        # Empty HTML file (purpose unclear)
-└── .DS_Store           # macOS system file (should be in .gitignore)
+├── CLAUDE.md           # AI assistant guide (this file)
+├── .gitignore          # Git ignore rules
+└── img/                # Images directory
+    └── favicon.png     # Site favicon (referenced but may be missing)
 ```
 
 ## Architecture & Technology
@@ -45,12 +44,11 @@ alvindang.github.io/
    - Social media links (LinkedIn, Instagram, Twitter/X)
    - Email contact (obfuscated via JavaScript to prevent spam)
 
-2. **Instagram Integration**:
-   - Uses Instafeed.js to fetch user's Instagram photos
-   - Access token: `***REDACTED***`
-   - User ID: 141970
-   - Displays random photos as background with captions
-   - Navigation controls for browsing photos
+2. **Instagram Integration** (Currently Disabled):
+   - Previously used Instafeed.js to fetch user's Instagram photos
+   - Access token and User ID removed for security
+   - Feature non-functional (instafeed.min.js missing, API deprecated)
+   - Consider removing or replacing with static images
 
 3. **Responsive Design**:
    - Desktop layout: Bio positioned absolutely (top-left)
@@ -187,22 +185,17 @@ I'm an experienced lifecycle, marketing & product growth leader, currently build
 
 2. **Deprecated/Legacy Code**:
    - jQuery 1.7.2 is very outdated (2012)
-   - Instagram API integration may be deprecated
-   - HTTP Typekit URL (line 18) should be HTTPS
+   - Instagram API integration is deprecated and disabled
 
-3. **File System**:
-   - `.DS_Store` should be gitignored
-   - `img/lul.html` appears to be unused
-   - `CNAME.html` duplicates CNAME (unclear purpose)
-
-4. **Security**:
-   - Instagram access token is exposed in public repository
-   - Mixed content warning: HTTP Typekit URL on HTTPS site
-
-5. **Code Organization**:
+3. **Code Organization**:
    - All CSS is inline (could be extracted for maintainability)
    - No JavaScript minification/optimization
-   - No .gitignore file
+
+### Resolved Issues (2025-01)
+- ✅ Added .gitignore file
+- ✅ Removed exposed Instagram access token
+- ✅ Fixed HTTP Typekit URL to HTTPS
+- ✅ Removed unused files (CNAME.html, img/lul.html, .DS_Store)
 
 ## Testing Checklist
 
@@ -238,29 +231,19 @@ The CNAME file points to `alvindang.com`. Ensure DNS records are configured:
 
 When appropriate, consider suggesting:
 
-1. **Add .gitignore**:
-   ```
-   .DS_Store
-   *.log
-   node_modules/
-   ```
-
-2. **Update jQuery**:
+1. **Update jQuery**:
    - Migrate to modern vanilla JavaScript or latest jQuery
    - Current version (1.7.2) has security vulnerabilities
 
-3. **Extract CSS**:
+2. **Extract CSS**:
    - Move inline styles to external `style.css`
    - Improves maintainability and caching
 
-4. **Fix Mixed Content**:
-   - Change Typekit URL to HTTPS (line 18)
+3. **Instagram Alternative**:
+   - Remove broken Instagram feature entirely
+   - Or replace with static gallery/images
 
-5. **Instagram Alternative**:
-   - Consider static gallery or remove feature
-   - Instagram API access is restricted for new apps
-
-6. **Add Meta Tags**:
+4. **Add Meta Tags**:
    - Open Graph tags for social sharing
    - Twitter Card tags
    - Updated favicon with multiple sizes
@@ -284,6 +267,6 @@ When updating professional information, current structure includes:
 
 ---
 
-**Last Updated**: 2025-11-25
+**Last Updated**: 2026-01-07
 **Maintained By**: AI Assistants working with repository owner
-**Version**: 1.0.0
+**Version**: 1.1.0

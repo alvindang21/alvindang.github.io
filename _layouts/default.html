@@ -693,12 +693,11 @@
       justify-content: center;
       border: 1px solid var(--border);
       flex-shrink: 0;
-    }
-
-    .exp-modal-logo svg {
-      width: 28px;
-      height: 28px;
-      fill: var(--text);
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: var(--text);
+      letter-spacing: -0.02em;
     }
 
     .exp-modal-titles {
@@ -1089,11 +1088,11 @@
     });
 
     const companyLogos = {
-      relay: '<svg viewBox="0 0 24 24"><path d="M6 4h8c2.2 0 4 1.8 4 4 0 1.5-.8 2.8-2 3.4V12c1.7.8 3 2.5 3 4.5 0 2.8-2.2 5-5 5H6V4zm3 7h5c.6 0 1-.4 1-1s-.4-1-1-1H9v2zm0 7h6c1.1 0 2-.9 2-2s-.9-2-2-2H9v4z"/></svg>',
-      homebase: '<svg viewBox="0 0 24 24"><path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3zm0 3.5L17 11v7h-2v-6H9v6H7v-7l5-4.5z"/></svg>',
-      wealthsimple: '<svg viewBox="0 0 24 24"><path d="M3 7l4 10h2l2-5 2 5h2l4-10h-2.5l-2.5 6.5L12 8h-1l-2 5.5L6.5 7H3z"/></svg>',
-      shopify: '<svg viewBox="0 0 24 24"><path d="M15.5 3c-.3 0-.5.2-.5.5 0 0-1 .4-1.5.5-.3-.9-1-1.5-1.8-1.5-.1 0-.2 0-.3 0C11 2.2 10.5 2 10 2c-1.5 0-2.8 1.8-3 3.5-.7.2-1.2.4-1.2.4-.4.1-.4.1-.4.5 0 0-.5 5.2-.5 5.6l7.1 1.5L17 12V4c0-.3-.2-.5-.5-.5-.3 0-.5-.2-.5-.5zm-4-1c.4 0 .7.2.9.6-.7.2-1.4.4-2.2.7C10.5 2.5 11 2 11.5 2zm-2 2.4c.7-.2 1.4-.4 2.1-.7.1.6.1 1.3 0 1.8-.5.2-1 .3-1.6.5 0-.5.2-1.1.5-1.6zm.5 2.6c.6-.2 1.2-.4 1.8-.5 0 .7-.1 1.5-.3 2.2l-1.8.5c.2-.7.3-1.5.3-2.2zM6 20l4-1 1 3-5-2zm6-1l5-1-1 4-4-3zm5-7l-4 1V8l4-1v5z"/></svg>',
-      blackberry: '<svg viewBox="0 0 24 24"><circle cx="8" cy="7" r="2.5"/><circle cx="16" cy="7" r="2.5"/><circle cx="6" cy="13" r="2.5"/><circle cx="12" cy="13" r="2.5"/><circle cx="18" cy="13" r="2.5"/><circle cx="8" cy="19" r="2.5"/><circle cx="16" cy="19" r="2.5"/></svg>'
+      relay: 'R',
+      homebase: 'H',
+      wealthsimple: 'W',
+      shopify: 'S',
+      blackberry: 'BB'
     };
 
     function openExperienceModal(company, role, years, description, url, logo) {
@@ -1103,7 +1102,7 @@
       document.getElementById('expModalYears').textContent = years;
       document.getElementById('expModalDescription').textContent = description;
       document.getElementById('expModalLink').href = url;
-      document.getElementById('expModalLogo').innerHTML = companyLogos[logo] || '';
+      document.getElementById('expModalLogo').textContent = companyLogos[logo] || '';
       overlay.classList.add('visible');
       document.body.style.overflow = 'hidden';
     }

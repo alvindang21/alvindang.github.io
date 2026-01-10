@@ -28,7 +28,7 @@ description: Alvin Dang — Builder, growth strategist, and occasionally top 0.0
 
   <div class="projects-list">
     {% for job in site.data.experience %}
-    <article class="project">
+    <article class="project" onclick="openExperienceModal('{{ job.company }}', '{{ job.role }}', '{{ job.years }}', '{{ job.description }}', '{{ job.url }}', '{{ job.logo }}')">
       <span class="project-index">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span>
       <div class="project-content">
         <h3 class="project-title">{{ job.company }}</h3>

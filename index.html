@@ -1,246 +1,985 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <link rel="shortcut icon" type="image/png" href="img/favicon.png">
-  <title> Alvin Dang | Growth Marketer</title>
-  <meta name="Keywords" content="Alvin Dang, Toronto, Ontario, Canada, GTA, Wealthsimple, Shopify, BlackBerry, Lifecycle, Lifecycle Marketing, Product Growth, Growth Marketer, Email, CRM, marketer, email marketer, digital marketer, growth">
-  <meta name="Description" content="Alvin Dang. Lifecycle, Product Growth and marketing leader. Based in Toronto, he is currently taking a break. Previously, he was part of the growth teams at Wealthsimple and Shopify."/>
-  <meta name="abstract" content="Alvin Dang. Lifecycle, Product Growth and marketing leader. Based in Toronto, he is currently taking a break. Previously, he was part of the growth teams at Wealthsimple and Shopify." />
-  <meta http-equiv="Content-Language" content="EN" />
-  <meta name="author" content="Alvin Dang" />
-  <meta name="distribution" content="Global" />
-  <meta name="revisit-after" content="1 days" />
-  <meta name="robots" content="FOLLOW,INDEX, NOODP" />
-  <meta name='viewport' content='width=device-width; initial-scale=1.0;' />
-  <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
-  <script type="text/javascript" src="instafeed.min.js"></script>
-  <script src="https://use.typekit.net/kjx8ypz.js"></script>
-  <script>try{Typekit.load();}catch(e){}</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alvin Dang</title>
+  <meta name="description" content="Alvin Dang — Builder, growth strategist, and occasionally top 0.01% gamer.">
 
-  
-  <style type='text/css'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&family=IBM+Plex+Mono:wght@300;400&display=swap" rel="stylesheet">
 
-  /* entypo */
-  body {
-      font-family: proxima-nova, sans-serif;
-      background: #FFF;
-  }
-    a {
-      text-decoration: none;
-      color: #0C6E99;
-    }
-    #whoami p {
-      opacity: 0;
-      margin-top: 25px;
-      font-size: 1.5em;
-      text-align: left;
-      z-index: 9999;
-      position: absolute;
-      color: #000;
-      top: 100px;
-      left: 100px;
-      width: 40%;
-      font-weight: 200;
-      line-height: 1.4em;
+  <style>
+    :root {
+      --bg: #F8F7F4;
+      --bg-subtle: #F0EEE9;
+      --text: #1C1C1C;
+      --text-secondary: #6B6B6B;
+      --text-tertiary: #9A9A9A;
+      --accent: #8B7355;
+      --border: #E5E3DE;
+
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'DM Sans', -apple-system, sans-serif;
+      --font-mono: 'IBM Plex Mono', monospace;
+
+      --space-xs: 0.5rem;
+      --space-sm: 1rem;
+      --space-md: 2rem;
+      --space-lg: 4rem;
+      --space-xl: 8rem;
+      --space-2xl: 12rem;
     }
 
-    #bg {
-      position:fixed; 
-      top:-50%; 
-      left:-50%; 
-      width:200%; 
-      height:200%;
-      background: #FFF;
+    [data-theme="dark"] {
+      --bg: #1A1918;
+      --bg-subtle: #242220;
+      --text: #F5F4F1;
+      --text-secondary: #A8A5A0;
+      --text-tertiary: #6B6866;
+      --accent: #C4A882;
+      --border: #333130;
     }
-    #bg img {
-      position:absolute; 
-      top:0; 
-      left:0; 
-      right:0; 
-      bottom:0; 
-      margin:auto; 
-      min-width:50%;
-      min-height:50%;
-      opacity: .4;
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    #caption {
-      z-index: 99999999;
-      color: rgba(255,255,255,1);
-      font-size: 16px;
-      position: absolute;
-      bottom: 50px;
-      right: 50px;
-      text-shadow: 0 1px 1px #000;
-      line-height: .9em;
-      font-family: helvetica neue;
-      font-weight: 200;
-      width: 50%;
-      text-align: right;
-      line-height: 1.3em;
-    }
-  
-    /* colors  I stole from Layer Vault because they own all the color in the world */
-    .green {color:#0C6E99;}
-    .tomato {color:#0C6E99;}
-    .sky {color:#0C6E99;}
-    .mustard {color:#0C6E99;}
 
     ::selection {
-     background: #222; /* Safari */
-    }
-    ::-moz-selection {
-      background: #222; /* Firefox */
+      background: var(--text);
+      color: var(--bg);
     }
 
-   @media only screen and (max-device-width: 480px), only screen and (min-device-width: 560px) and (max-device-width: 1136px) and (-webkit-min-device-pixel-ratio: 2) {
-    /* iPhone only */
-      #whoami p {
-      opacity: 0;
-      margin: 2em;
-      font-size: 1.4em;
-      text-align: left;
-      z-index: 9999;
-      position: relative;
-      color: #000;
-      top: .5em;
-      left: .2em;
-      width: 80%;
-      weight: bold;
-      display: inline-block;
-      padding: 0 0 100px 0;
-    }
-  
-    #caption {
-      z-index: 99999999;
-      color: rgba(255,255,255,1);
+    html {
       font-size: 16px;
-      position: relative;
-      left: 50px;
-      text-shadow: 0 1px 1px #000;
-      line-height: .9em;
-      font-family: helvetica neue;
-      font-weight: 200;
-      width: 75%;
-      text-align: left;
-      line-height: 1.3em;
+      scroll-behavior: smooth;
     }
-   }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      font-weight: 300;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* Clean Navigation - no box */
+    .nav {
+      position: fixed;
+      bottom: var(--space-md);
+      left: var(--space-md);
+      z-index: 100;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+
+    .nav.hidden {
+      opacity: 0;
+      transform: translateY(10px);
+      pointer-events: none;
+    }
+
+    .nav-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-xs);
+    }
+
+    .nav-item a {
+      color: var(--text-tertiary);
+      transition: color 0.3s ease;
+      display: inline-block;
+    }
+
+    .nav-item a:hover {
+      color: var(--text);
+    }
+
+    .nav-index {
+      color: var(--text-tertiary);
+      margin-right: var(--space-xs);
+      font-size: 0.65rem;
+      opacity: 0.6;
+    }
+
+    /* Top controls */
+    .top-controls {
+      position: fixed;
+      top: var(--space-md);
+      right: var(--space-md);
+      z-index: 100;
+      display: flex;
+      gap: var(--space-md);
+      align-items: center;
+    }
+
+    .theme-toggle {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--text-tertiary);
+      cursor: pointer;
+      transition: color 0.3s ease;
+      background: none;
+      border: none;
+    }
+
+    .theme-toggle:hover {
+      color: var(--text);
+    }
+
+    .theme-icon {
+      display: none;
+    }
+
+    .theme-icon.dark {
+      display: inline;
+    }
+
+    [data-theme="dark"] .theme-icon.dark {
+      display: none;
+    }
+
+    [data-theme="dark"] .theme-icon.light {
+      display: inline;
+    }
+
+    .info-btn {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--text-tertiary);
+      cursor: pointer;
+      transition: color 0.3s ease;
+      background: none;
+      border: none;
+    }
+
+    .info-btn:hover {
+      color: var(--text);
+    }
+
+    /* Main Content */
+    main {
+      min-height: 100vh;
+      padding: var(--space-xl) var(--space-md);
+      padding-left: calc(var(--space-md) + 100px);
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    /* Hero Section - more dramatic */
+    .hero {
+      min-height: 85vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-bottom: var(--space-xl);
+    }
+
+    .hero-name {
+      font-family: var(--font-serif);
+      font-size: clamp(3rem, 10vw, 7rem);
+      font-weight: 300;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      margin-bottom: var(--space-md);
+      animation: revealName 1s ease-out;
+    }
+
+    @keyframes revealName {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero-intro {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-xl);
+      max-width: 900px;
+      animation: fadeUp 1s ease-out 0.3s backwards;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero-tagline {
+      font-family: var(--font-serif);
+      font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+      font-weight: 300;
+      color: var(--text);
+      line-height: 1.4;
+    }
+
+    .hero-meta {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--text-tertiary);
+      line-height: 1.8;
+      padding-top: 0.3rem;
+    }
+
+    .hero-meta span {
+      display: block;
+    }
+
+    .hero-meta .highlight {
+      color: var(--text-secondary);
+    }
+
+    /* Scroll indicator */
+    .scroll-hint {
+      position: absolute;
+      bottom: var(--space-lg);
+      right: var(--space-md);
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--text-tertiary);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      writing-mode: vertical-rl;
+      animation: fadeUp 1s ease-out 0.6s backwards;
+    }
+
+    .scroll-hint::after {
+      content: '';
+      display: block;
+      width: 1px;
+      height: 40px;
+      background: var(--border);
+      margin-top: var(--space-sm);
+      margin-left: 50%;
+      transform: translateX(-50%);
+      animation: scrollLine 2s ease-in-out infinite;
+    }
+
+    @keyframes scrollLine {
+      0%, 100% { opacity: 0.3; height: 40px; }
+      50% { opacity: 1; height: 60px; }
+    }
+
+    /* Section Styling */
+    section {
+      padding: var(--space-xl) 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: var(--space-lg);
+    }
+
+    .section-title {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-tertiary);
+    }
+
+    .section-count {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--text-tertiary);
+    }
+
+    /* Projects */
+    .projects-list {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-lg);
+    }
+
+    .project {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: var(--space-md);
+      align-items: baseline;
+      padding: var(--space-sm) 0;
+      cursor: pointer;
+      transition: opacity 0.3s ease;
+    }
+
+    .project:hover {
+      opacity: 0.6;
+    }
+
+    .project-index {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--text-tertiary);
+      padding-top: 0.3rem;
+    }
+
+    .project-content {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-xs);
+    }
+
+    .project-title {
+      font-family: var(--font-serif);
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+    }
+
+    .project-role {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      letter-spacing: 0.02em;
+      margin-bottom: 4px;
+    }
+
+    .project-description {
+      font-size: 0.9rem;
+      color: var(--text-tertiary);
+      max-width: 400px;
+    }
+
+    .project-year {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--text-tertiary);
+      align-self: start;
+      padding-top: 0.5rem;
+    }
+
+    /* Writing */
+    .writing-list {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-md);
+    }
+
+    .writing-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: var(--space-sm) 0;
+      border-bottom: 1px solid var(--border);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .writing-item:hover {
+      padding-left: var(--space-sm);
+      border-color: var(--text-tertiary);
+    }
+
+    .writing-title {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      font-weight: 400;
+      font-style: italic;
+    }
+
+    .writing-date {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--text-tertiary);
+      flex-shrink: 0;
+      margin-left: var(--space-md);
+    }
+
+    /* Contact */
+    .contact {
+      padding: var(--space-2xl) 0 var(--space-xl);
+    }
+
+    .contact-content {
+      max-width: 700px;
+    }
+
+    .contact-text {
+      font-family: var(--font-serif);
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-weight: 300;
+      line-height: 1.3;
+      margin-bottom: var(--space-lg);
+    }
+
+    .contact-links {
+      display: flex;
+      gap: var(--space-lg);
+      align-items: center;
+    }
+
+    .contact-cta {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      letter-spacing: 0.02em;
+      color: var(--text-secondary);
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-xs);
+      transition: color 0.3s ease;
+    }
+
+    .contact-cta:hover {
+      color: var(--text);
+    }
+
+    .contact-cta::before {
+      content: '→';
+      opacity: 0;
+      transform: translateX(-10px);
+      transition: all 0.3s ease;
+    }
+
+    .contact-cta:hover::before {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    /* Footer */
+    footer {
+      padding: var(--space-lg) 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--text-tertiary);
+      letter-spacing: 0.02em;
+    }
+
+    .footer-status {
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+    }
+
+    .status-dot {
+      width: 6px;
+      height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    /* Info Panel */
+    .info-panel {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      max-width: 520px;
+      height: 100vh;
+      background: var(--bg);
+      border-left: 1px solid var(--border);
+      padding: var(--space-xl) var(--space-md);
+      transform: translateX(100%);
+      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 200;
+      overflow-y: auto;
+    }
+
+    .info-panel.open {
+      transform: translateX(0);
+    }
+
+    .info-close {
+      position: absolute;
+      top: var(--space-md);
+      right: var(--space-md);
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--text-tertiary);
+      cursor: pointer;
+      background: none;
+      border: none;
+      transition: color 0.3s ease;
+    }
+
+    .info-close:hover {
+      color: var(--text);
+    }
+
+    .info-content {
+      padding-top: var(--space-xl);
+    }
+
+    .info-bio {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      font-weight: 300;
+      line-height: 1.55;
+      margin-bottom: var(--space-md);
+    }
+
+    .info-bio:last-of-type {
+      margin-bottom: var(--space-md);
+    }
+
+    .info-bio a {
+      border-bottom: 1px solid var(--border);
+      transition: border-color 0.3s ease;
+    }
+
+    .info-bio a:hover {
+      border-color: var(--text);
+    }
+
+    .info-aside {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--text-tertiary);
+      line-height: 1.7;
+      margin-bottom: var(--space-lg);
+      padding-left: var(--space-sm);
+      border-left: 2px solid var(--border);
+    }
+
+    .info-section {
+      margin-bottom: var(--space-md);
+    }
+
+    .info-label {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-tertiary);
+      margin-bottom: var(--space-xs);
+    }
+
+    .info-value {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    .info-links {
+      display: flex;
+      gap: var(--space-lg);
+      margin-top: var(--space-xl);
+      padding-top: var(--space-md);
+      border-top: 1px solid var(--border);
+    }
+
+    .info-link {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      letter-spacing: 0.02em;
+      color: var(--text-secondary);
+      transition: color 0.3s ease;
+    }
+
+    .info-link:hover {
+      color: var(--text);
+    }
+
+    /* Overlay */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(28, 28, 28, 0.08);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.5s ease;
+      z-index: 150;
+    }
+
+    .overlay.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      main {
+        padding-left: var(--space-md);
+      }
+
+      .hero-intro {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+      }
+
+      .scroll-hint {
+        display: none;
+      }
+    }
+
+    @media (max-width: 768px) {
+      :root {
+        --space-xl: 4rem;
+        --space-2xl: 6rem;
+      }
+
+      .nav {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        margin: var(--space-md);
+        margin-bottom: 0;
+      }
+
+      .nav.hidden {
+        opacity: 1;
+        transform: none;
+        pointer-events: auto;
+      }
+
+      .nav-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: var(--space-sm);
+      }
+
+      .hero {
+        min-height: 70vh;
+      }
+
+      .hero-name {
+        font-size: clamp(2.5rem, 10vw, 4rem);
+      }
+
+      .project {
+        grid-template-columns: auto 1fr;
+        gap: var(--space-sm);
+      }
+
+      .project-year {
+        grid-column: 2;
+        padding-top: 0;
+      }
+
+      .info-panel {
+        max-width: 100%;
+      }
+
+      main {
+        padding: var(--space-md);
+        padding-top: var(--space-sm);
+      }
+
+      .contact-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-sm);
+      }
+    }
+
+    section[id] {
+      scroll-margin-top: var(--space-md);
+    }
   </style>
-  
-
-  <!-- soft load the bio -->
-  <script type='text/javascript'>//<![CDATA[ 
-    $(window).load(function(){
-    $("#whoami p").delay(1000).animate({"opacity": "1"}, 700);
-    });//]]>  
-  </script>
-
-
-  
-
 </head>
-
 <body>
-  <div id="whoami">
-    <p>
-      Hi there. 
-      
-      <br><br>
-     My name is Alvin Dang.
+  <!-- Navigation -->
+  <nav class="nav" id="mainNav">
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a href="#work"><span class="nav-index">01</span>Work</a>
+      </li>
+      <li class="nav-item">
+        <a href="#writing"><span class="nav-index">02</span>Writing</a>
+      </li>
+      <li class="nav-item">
+        <a href="#contact"><span class="nav-index">03</span>Contact</a>
+      </li>
+    </ul>
+  </nav>
 
-     <br><br>
-     I'm an experienced lifecycle, marketing & product growth leader, currently building the lifecycle marketing & product growth teams at <a href="https://www.joinhomebase.com" class="green">Homebase</a>.
-
-      <br><br>
-      Previously, lifecycle & product growth at <a href="https://www.wealthsimple.com" class="green">Wealthsimple</a>, growth at <a href="https://www.shopify.com" class="green">Shopify</a>, email marketing for <a href="https://www.ariad.ca" class="tomato">Ariad Communications</a> and <a href="https://www.blackberry.com" class="tomato">BlackBerry</a>. My history is on <a href="https://www.linkedin.com/in/alvindang/" class="sky">LinkedIn</a>.
-     
-      
-      <br><br>
-     You should follow me on <a href="http://instagram.com/alvin.dang" class="mustard">Instagram</a> where I share photos of fits, sneakers and my life. <a class="follow-twitter mustard" href=" http://twitter.com/alvindang" onclick="window.open('https://twitter.com/intent/follow?screen_name=alvindang&amp;source=followbutton&amp;variant=1.0','FollowAddThis','width=520,height=520');return false;">X</a> if you want to hear my frustrations as a lifelong Toronto Raptors fan. 
-
-     <br><br>
-     Open for select consulting and freelance opportunities.
-
-      <br><br>
-      <!-- make it hard for spiders to get my email -->
-      <script language=javascript>
-        <!-- 
-        var showtag="@"
-        var showlink="Contact me";
-        var showname="alvin";
-        var showhost="alvindang.com";
-        document.write("<a href="+"mail"+"to:"+showname+showtag+showhost+" "+"class='mustard'"+">"+showlink+"</a>")
-        //-->
-      </script>
-    </p>
+  <!-- Top Controls -->
+  <div class="top-controls">
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+      <span class="theme-icon light">Light</span>
+      <span class="theme-icon dark">Dark</span>
+    </button>
+    <button class="info-btn" onclick="toggleInfo()">Info</button>
   </div>
 
-  <!-- instagram photo become the background -->
-  <div id="instafeed"></div>
- <div class="controls">
-  <div class="prev entypo-left-open-big"></div>
-  <div class="next entypo-right-open-big"></div>
+  <!-- Info Panel -->
+  <div class="info-panel" id="infoPanel">
+    <button class="info-close" onclick="toggleInfo()">Close</button>
+    <div class="info-content">
+      <p class="info-bio">
+        I build growth systems. Spent a decade at <a href="https://relayfi.com" target="_blank">Relay</a>, Wealthsimple, and Shopify turning data and user insights into playbooks that actually scale.
+      </p>
+      <p class="info-bio">
+        Outside of work, I'm a multi-set Challenger in TFT (top 0.01% — yes, I take fake points very seriously) and a lifelong Raptors fan. Also an amateur barista and aggressively mediocre home cook.
+      </p>
 
-  <!-- Grab My Latest Instagram Photo -->
-  <script type="text/javascript">
+      <div class="info-aside">
+        The gaming thing isn't a flex, it's a character flaw. But it did teach me more about systems and feedback loops than any business book.
+      </div>
 
+      <div class="info-section">
+        <div class="info-label">Now</div>
+        <div class="info-value">Leading Lifecycle Marketing at Relay</div>
+      </div>
 
-feed = new Instafeed({
-   get: 'user',
-        userId: '',  // Removed - add your Instagram user ID
-        accessToken: '',  // Removed for security - add via environment or remove feature
-        sortby: 'random',
-        resolution: 'standard_resolution',
-        links: 'false',
-        limit: '10',
-        template: '<div id="caption">{{caption}} <br>{{likes}} likes on my <a href="http://instagram.com/alvin.dang" class="sky">instagram</a></div><div id="bg"><img src="{{image}}" /></div>',
-  mock: true,
-  custom: {
-    images: [],
-    currentImage: 0,
-    showImage: function () {
-      var result, image;
-      image = this.options.custom.images[this.options.custom.currentImage];
-      result = this._makeTemplate(this.options.template, {
-        model: image,
-        id: image.id,
-        link: image.link,
-        image: image.images[this.options.resolution].url,
-        caption: this._getObjectProperty(image, 'caption.text'),
-        likes: image.likes.count,
-        comments: image.comments.count,
-        location: this._getObjectProperty(image, 'location.name')
-      });
-      $("#instafeed").html(result);
+      <div class="info-section">
+        <div class="info-label">Previously</div>
+        <div class="info-value">Wealthsimple, Shopify, Homebase, BlackBerry</div>
+      </div>
+
+      <div class="info-section">
+        <div class="info-label">Education</div>
+        <div class="info-value">Lazaridis School of Business, Wilfrid Laurier</div>
+      </div>
+
+      <div class="info-links">
+        <a href="mailto:alvin@alvindang.com" class="info-link">Email</a>
+        <a href="https://linkedin.com/in/alvindang" target="_blank" class="info-link">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Overlay -->
+  <div class="overlay" id="overlay" onclick="toggleInfo()"></div>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <h1 class="hero-name">Alvin Dang</h1>
+
+      <div class="hero-intro">
+        <p class="hero-tagline">
+          Builder and growth strategist. I make playbooks for scaling things that matter.
+        </p>
+        <div class="hero-meta">
+          <span class="highlight">Currently at Relay</span>
+          <span>Previously Wealthsimple, Shopify</span>
+          <span>Lifecycle · Growth · Systems</span>
+        </div>
+      </div>
+
+      <div class="scroll-hint">Scroll</div>
+    </section>
+
+    <!-- Experience -->
+    <section id="work">
+      <div class="section-header">
+        <h2 class="section-title">Experience</h2>
+        <span class="section-count">05</span>
+      </div>
+
+      <div class="projects-list">
+        <article class="project">
+          <span class="project-index">01</span>
+          <div class="project-content">
+            <h3 class="project-title">Relay</h3>
+            <p class="project-role">Director, Lifecycle Marketing</p>
+          </div>
+          <span class="project-year">2024–Present</span>
+        </article>
+
+        <article class="project">
+          <span class="project-index">02</span>
+          <div class="project-content">
+            <h3 class="project-title">Homebase</h3>
+            <p class="project-role">Director, Lifecycle Marketing</p>
+          </div>
+          <span class="project-year">2022–2024</span>
+        </article>
+
+        <article class="project">
+          <span class="project-index">03</span>
+          <div class="project-content">
+            <h3 class="project-title">Wealthsimple</h3>
+            <p class="project-role">Head of Lifecycle → Growth PM</p>
+          </div>
+          <span class="project-year">2018–2022</span>
+        </article>
+
+        <article class="project">
+          <span class="project-index">04</span>
+          <div class="project-content">
+            <h3 class="project-title">Shopify</h3>
+            <p class="project-role">Marketing Automation Specialist</p>
+          </div>
+          <span class="project-year">2016–2018</span>
+        </article>
+
+        <article class="project">
+          <span class="project-index">05</span>
+          <div class="project-content">
+            <h3 class="project-title">BlackBerry</h3>
+            <p class="project-role">Marketing Specialist, CRM</p>
+          </div>
+          <span class="project-year">2013–2014</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- Writing -->
+    <section id="writing">
+      <div class="section-header">
+        <h2 class="section-title">Writing</h2>
+        <span class="section-count">03</span>
+      </div>
+
+      <div class="writing-list">
+        <article class="writing-item">
+          <h3 class="writing-title">On systems and their builders</h3>
+          <span class="writing-date">2024</span>
+        </article>
+
+        <article class="writing-item">
+          <h3 class="writing-title">The craft of growth</h3>
+          <span class="writing-date">2024</span>
+        </article>
+
+        <article class="writing-item">
+          <h3 class="writing-title">Learning to build in public</h3>
+          <span class="writing-date">2023</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+      <div class="contact-content">
+        <p class="contact-text">
+          Let's talk about growth, systems, or whatever you're building. I'm always curious.
+        </p>
+        <div class="contact-links">
+          <a href="mailto:alvin@alvindang.com" class="contact-cta">Say hello</a>
+          <a href="https://linkedin.com/in/alvindang" target="_blank" class="contact-cta">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-status">
+        <span class="status-dot"></span>
+        <span>Available for interesting problems</span>
+      </div>
+      <span>© 2025</span>
+    </footer>
+  </main>
+
+  <script>
+    (function initTheme() {
+      const saved = localStorage.getItem('theme');
+      if (saved) {
+        document.documentElement.setAttribute('data-theme', saved);
+      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
     }
-  },
-  success: function (data) {
-    this.options.custom.images = data.data; 
-    this.options.custom.showImage.call(this);
-  }
-});
-feed.run();
 
-$(".next").click(function () {
-  var length, current;
-  current = feed.options.custom.currentImage;
-  length = feed.options.custom.images.length;
-  if (current < length - 1) {
-    feed.options.custom.currentImage++;
-    feed.options.custom.showImage.call(feed);
-  }
-});
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+      if (!localStorage.getItem('theme')) {
+        document.documentElement.setAttribute('data-theme', e.matches ? 'dark' : 'light');
+      }
+    });
 
-$(".prev").click(function () {
-  var length, current;
-  current = feed.options.custom.currentImage;
-  length = feed.options.custom.images.length;
-  if (current > 0) {
-    feed.options.custom.currentImage--
-    feed.options.custom.showImage.call(feed);
-  }
-});
+    function toggleInfo() {
+      const panel = document.getElementById('infoPanel');
+      const overlay = document.getElementById('overlay');
+      panel.classList.toggle('open');
+      overlay.classList.toggle('visible');
+      document.body.style.overflow = panel.classList.contains('open') ? 'hidden' : '';
+    }
+
+    // Handle nav visibility
+    const nav = document.getElementById('mainNav');
+    let ticking = false;
+
+    function updateNav() {
+      const currentScroll = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const docHeight = document.documentElement.scrollHeight;
+
+      if (window.innerWidth > 768) {
+        if (currentScroll + windowHeight > docHeight - 300) {
+          nav.classList.add('hidden');
+        } else {
+          nav.classList.remove('hidden');
+        }
+      }
+      ticking = false;
+    }
+
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        requestAnimationFrame(updateNav);
+        ticking = true;
+      }
+    });
+
+    // Scroll animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+    document.querySelectorAll('.project, .writing-item').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(el);
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        const panel = document.getElementById('infoPanel');
+        if (panel.classList.contains('open')) toggleInfo();
+      }
+    });
   </script>
 </body>
 </html>

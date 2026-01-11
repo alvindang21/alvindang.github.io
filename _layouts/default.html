@@ -12,13 +12,14 @@
 
   <style>
     :root {
-      --bg: #F8F7F4;
-      --bg-subtle: #F0EEE9;
+      --bg: #F4F1EB;
+      --bg-subtle: #EBE7DF;
       --text: #1C1C1C;
-      --text-secondary: #6B6B6B;
-      --text-tertiary: #9A9A9A;
+      --text-secondary: #5C5C5C;
+      --text-tertiary: #8A8A8A;
       --accent: #8B7355;
-      --border: #E5E3DE;
+      --accent-hover: #6D5A43;
+      --border: #DDD9D0;
 
       --font-serif: 'Cormorant Garamond', Georgia, serif;
       --font-sans: 'DM Sans', -apple-system, sans-serif;
@@ -105,7 +106,7 @@
     }
 
     .nav-item a:hover {
-      color: var(--text);
+      color: var(--accent);
     }
 
     .nav-index {
@@ -138,7 +139,7 @@
     }
 
     .theme-toggle:hover {
-      color: var(--text);
+      color: var(--accent);
     }
 
     .theme-icon {
@@ -170,7 +171,7 @@
     }
 
     .info-btn:hover {
-      color: var(--text);
+      color: var(--accent);
     }
 
     main {
@@ -390,7 +391,11 @@
 
     .writing-item:hover {
       padding-left: var(--space-sm);
-      border-color: var(--text-tertiary);
+      border-color: var(--accent);
+    }
+
+    .writing-item:hover .writing-title {
+      color: var(--accent);
     }
 
     .writing-title {
@@ -398,6 +403,7 @@
       font-size: 1.25rem;
       font-weight: 400;
       font-style: italic;
+      transition: color 0.3s ease;
     }
 
     .writing-date {
@@ -442,7 +448,7 @@
     }
 
     .contact-cta:hover {
-      color: var(--text);
+      color: var(--accent);
     }
 
     .contact-cta::before {
@@ -523,7 +529,7 @@
     }
 
     .info-close:hover {
-      color: var(--text);
+      color: var(--accent);
     }
 
     .info-content {
@@ -544,11 +550,12 @@
 
     .info-bio a {
       border-bottom: 1px solid var(--border);
-      transition: border-color 0.3s ease;
+      transition: border-color 0.3s ease, color 0.3s ease;
     }
 
     .info-bio a:hover {
-      border-color: var(--text);
+      border-color: var(--accent);
+      color: var(--accent);
     }
 
     .info-aside {
@@ -597,7 +604,7 @@
     }
 
     .info-link:hover {
-      color: var(--text);
+      color: var(--accent);
     }
 
     .overlay {
@@ -675,7 +682,7 @@
     }
 
     .exp-modal-close:hover {
-      color: var(--text);
+      color: var(--accent);
     }
 
     .exp-modal-header {
@@ -749,7 +756,7 @@
     }
 
     .exp-modal-link:hover {
-      color: var(--text);
+      color: var(--accent);
     }
 
     .exp-modal-link::after {
@@ -823,11 +830,12 @@
 
     .post-content a {
       border-bottom: 1px solid var(--border);
-      transition: border-color 0.3s ease;
+      transition: border-color 0.3s ease, color 0.3s ease;
     }
 
     .post-content a:hover {
-      border-color: var(--text);
+      border-color: var(--accent);
+      color: var(--accent);
     }
 
     .post-content blockquote {
@@ -881,7 +889,7 @@
     }
 
     .back-link:hover {
-      color: var(--text);
+      color: var(--accent);
     }
 
     @media (max-width: 900px) {

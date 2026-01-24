@@ -40,6 +40,28 @@ description: Alvin Dang — Lifecycle marketing leader, and occasionally top 0.0
   </div>
 </section>
 
+<section id="projects">
+  <div class="section-header">
+    <h2 class="section-title">Projects</h2>
+    <span class="section-count">{% if site.data.projects.size < 10 %}0{% endif %}{{ site.data.projects.size }}</span>
+  </div>
+
+  <div class="projects-list">
+    {% for project in site.data.projects %}
+    <a href="{{ project.url }}" class="project-link" {% if project.url != "#" %}target="_blank"{% endif %}>
+      <article class="project">
+        <span class="project-index">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span>
+        <div class="project-content">
+          <h3 class="project-title">{{ project.title }}</h3>
+          <p class="project-description">{{ project.description }}</p>
+        </div>
+        <span class="project-year">{{ project.year }}</span>
+      </article>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+
 <section id="writing">
   <div class="section-header">
     <h2 class="section-title">Writing</h2>

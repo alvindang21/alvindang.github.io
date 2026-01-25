@@ -1,0 +1,52 @@
+export interface Experience {
+  company: string;
+  role: string;
+  years: string;
+  description: string;
+  url: string;
+  logo: "relay" | "homebase" | "wealthsimple" | "shopify" | "blackberry";
+}
+
+export const experience: Experience[] = [
+  {
+    company: "Relay",
+    role: "Director, Lifecycle Marketing",
+    years: "2024–Present",
+    description: "Building growth systems for SMB fintech. Leading lifecycle strategy across onboarding, activation, and retention.",
+    url: "https://relayfi.com",
+    logo: "relay",
+  },
+  {
+    company: "Homebase",
+    role: "Director, Lifecycle Marketing",
+    years: "2022–2024",
+    description: "Built Lifecycle and Top-of-Funnel functions from scratch. Helped secure $60M Series D through growth initiatives.",
+    url: "https://joinhomebase.com",
+    logo: "homebase",
+  },
+  {
+    company: "Wealthsimple",
+    role: "Head of Lifecycle → Growth PM",
+    years: "2018–2022",
+    description: "Scaled team from 1 to 15. Built TLDR newsletter, grew to 2B messages/year. Drove growth from $350M to $5B AUM.",
+    url: "https://wealthsimple.com",
+    logo: "wealthsimple",
+  },
+  {
+    company: "Shopify",
+    role: "Marketing Automation Specialist",
+    years: "2016–2018",
+    description: "Global lifecycle programs for Shopify Core, Capital, and Shipping. Post-IPO growth phase.",
+    url: "https://shopify.com",
+    logo: "shopify",
+  },
+  {
+    company: "BlackBerry",
+    role: "Marketing Specialist, CRM",
+    years: "2013–2014",
+    description: "BB10 Global Welcome program. Early career foundation in CRM and lifecycle marketing.",
+    url: "https://blackberry.com",
+    logo: "blackberry",
+  },
+];
+

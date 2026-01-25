@@ -8,12 +8,12 @@ export function WritingList() {
           Writing
         </h2>
         <span className="font-mono text-[0.7rem] text-text-tertiary">
-          {String(posts.length).padStart(2, "0")}
+          {posts.length > 0 ? String(posts.length).padStart(2, "0") : "—"}
         </span>
       </div>
 
       {posts.length === 0 ? (
-        <p className="font-mono text-[0.8rem] text-text-tertiary">Coming soon.</p>
+        <WritingPlaceholder />
       ) : (
         <div className="flex flex-col gap-8">
           {posts.map((post) => (
@@ -33,5 +33,18 @@ export function WritingList() {
         </div>
       )}
     </section>
+  );
+}
+
+function WritingPlaceholder() {
+  return (
+    <div className="border-l-2 border-border pl-6 py-2">
+      <p className="font-serif text-lg italic text-text-secondary/70 mb-3">
+        Essays on lifecycle marketing, growth systems, and building at scale.
+      </p>
+      <p className="font-mono text-[0.75rem] text-text-tertiary">
+        Newsletter launching soon
+      </p>
+    </div>
   );
 }

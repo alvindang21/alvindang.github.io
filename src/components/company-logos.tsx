@@ -13,7 +13,7 @@ export function RelayLogo(props: LogoProps) {
 export function HomebaseLogo(props: LogoProps) {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
-      <path d="M12 3L4 9v12h5v-7h6v7h5V9l-8-6zm0 2.5l6 4.5v9h-2v-7H8v7H6v-9l6-4.5z" />
+      <path d="M4 3h5v8h6V3h5v18h-5v-8H9v8H4V3z" />
     </svg>
   );
 }
@@ -21,7 +21,7 @@ export function HomebaseLogo(props: LogoProps) {
 export function WealthsimpleLogo(props: LogoProps) {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
-      <path d="M2 7h3.5l2.5 8.5L11 7h2l3 8.5L18.5 7H22l-5 14h-3l-3-8.5L8 21H5L2 7z" />
+      <path d="M1 4h3.5l2.5 9 3-9h4l3 9 2.5-9H23l-5 16h-3.5l-2.5-8-2.5 8H6L1 4z" />
     </svg>
   );
 }

@@ -9,10 +9,17 @@ export function Hero() {
           Lifecycle marketing leader. I build playbooks for scaling things that
           matter.
         </p>
-        <div className="font-mono text-[0.8rem] text-text-tertiary leading-loose pt-1">
-          <span className="block text-text-secondary">Currently at Relay</span>
-          <span className="block">Previously Wealthsimple, Shopify</span>
-          <span className="block">Lifecycle · Growth · Systems</span>
+        <div className="font-mono text-[0.8rem] leading-loose pt-1 space-y-3">
+          <div className="flex items-center gap-2">
+            <span className="w-1.5 h-1.5 bg-accent rounded-full animate-pulse-dot" />
+            <span className="text-text-secondary">Currently at Relay</span>
+          </div>
+          <div className="text-text-tertiary pl-3.5 border-l border-border/50">
+            <span className="block">Previously Wealthsimple, Shopify</span>
+            <span className="block mt-2 pt-2 border-t border-border/30">
+              Lifecycle · Growth · Systems
+            </span>
+          </div>
         </div>
       </div>
       <div className="absolute bottom-16 right-8 font-mono text-[0.7rem] text-text-tertiary tracking-widest uppercase [writing-mode:vertical-rl] animate-fade-up [animation-delay:0.6s]">

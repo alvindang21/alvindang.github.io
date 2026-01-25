@@ -11,31 +11,53 @@ const navItems = [
 
 export function Nav() {
   const [isVisible, setIsVisible] = useState(true);
+  const [activeSection, setActiveSection] = useState<string>("");
 
   useEffect(() => {
-    let observer: IntersectionObserver | null = null;
+    let footerObserver: IntersectionObserver | null = null;
+    let sectionObserver: IntersectionObserver | null = null;
 
-    const setupObserver = () => {
+    const setupObservers = () => {
       const footer = document.querySelector("footer");
-      if (!footer) return false;
+      const sections = navItems
+        .map((item) => document.querySelector(item.href))
+        .filter(Boolean) as Element[];
 
-      observer = new IntersectionObserver(
+      if (!footer || sections.length === 0) return false;
+
+      footerObserver = new IntersectionObserver(
         ([entry]) => {
           setIsVisible(!entry.isIntersecting);
         },
         { threshold: 0, rootMargin: "100px" }
       );
 
-      observer.observe(footer);
+      sectionObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setActiveSection(`#${entry.target.id}`);
+            }
+          });
+        },
+        { threshold: 0.3, rootMargin: "-20% 0px -60% 0px" }
+      );
+
+      footerObserver.observe(footer);
+      sections.forEach((section) => sectionObserver?.observe(section));
+
       return true;
     };
 
-    if (!setupObserver()) {
-      const retryId = requestAnimationFrame(setupObserver);
+    if (!setupObservers()) {
+      const retryId = requestAnimationFrame(setupObservers);
       return () => cancelAnimationFrame(retryId);
     }
 
-    return () => observer?.disconnect();
+    return () => {
+      footerObserver?.disconnect();
+      sectionObserver?.disconnect();
+    };
   }, []);
 
   return (
@@ -47,15 +69,26 @@ export function Nav() {
         ${isVisible ? "opacity-100" : "opacity-0 pointer-events-none"}
       `}
     >
-      {navItems.map((item) => (
-        <a
-          key={item.href}
-          href={item.href}
-          className="text-text-tertiary hover:text-accent transition-colors"
-        >
-          <span className="text-text-tertiary/60">{item.index}</span> {item.label}
-        </a>
-      ))}
+      {navItems.map((item) => {
+        const isActive = activeSection === item.href;
+        return (
+          <a
+            key={item.href}
+            href={item.href}
+            className={`
+              transition-all duration-200
+              ${isActive ? "text-accent translate-x-1" : "text-text-tertiary hover:text-accent"}
+            `}
+          >
+            <span
+              className={`transition-colors ${isActive ? "text-accent/80" : "text-text-tertiary/60"}`}
+            >
+              {item.index}
+            </span>{" "}
+            {item.label}
+          </a>
+        );
+      })}
     </nav>
   );
 }
@@ -69,7 +102,8 @@ export function MobileNav() {
           href={item.href}
           className="text-text-tertiary hover:text-accent transition-colors"
         >
-          <span className="text-text-tertiary/60">{item.index}</span> {item.label}
+          <span className="text-text-tertiary/60">{item.index}</span>{" "}
+          {item.label}
         </a>
       ))}
     </nav>

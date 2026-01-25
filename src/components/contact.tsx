@@ -3,8 +3,8 @@ export function Contact() {
     <section id="contact" className="py-48 border-t border-border">
       <div className="max-w-[700px]">
         <p className="font-serif text-[clamp(1.75rem,4vw,2.5rem)] font-light leading-snug mb-16">
-          Let's talk about growth, systems, or whatever you're building. I'm
-          always curious.
+          Let&apos;s talk about growth, systems, or whatever you&apos;re
+          building. I&apos;m always curious.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-16 items-start">
           <ContactLink href="mailto:alvin@alvindang.com">Say hello</ContactLink>

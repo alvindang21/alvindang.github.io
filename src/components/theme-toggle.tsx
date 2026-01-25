@@ -7,7 +7,9 @@ export function ThemeToggle() {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
+  // Required for hydration mismatch prevention with next-themes
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setMounted(true);
   }, []);
 
@@ -16,7 +18,7 @@ export function ThemeToggle() {
   return (
     <button
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className="font-mono text-[0.75rem] tracking-widest uppercase text-tertiary transition-colors hover:text-accent"
+      className="font-mono text-[0.75rem] tracking-widest uppercase text-text-tertiary transition-colors hover:text-accent"
     >
       {theme === "dark" ? "Light" : "Dark"}
     </button>

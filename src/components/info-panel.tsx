@@ -32,15 +32,15 @@ export function InfoPanel() {
             that scale.
           </p>
           <p className="font-serif text-xl font-light leading-relaxed">
-            Outside of work, I'm a multi-set Challenger in TFT (top 0.01% — yes,
-            I take fake points very seriously) and a lifelong Raptors fan. Also
-            an amateur barista and aggressively mediocre home cook.
+            Outside of work, I&apos;m a multi-set Challenger in TFT (top 0.01% —
+            yes, I take fake points very seriously) and a lifelong Raptors fan.
+            Also an amateur barista and aggressively mediocre home cook.
           </p>
 
           <div className="font-mono text-[0.8rem] text-text-tertiary leading-loose pl-4 border-l-2 border-border">
-            The gaming thing isn't a flex, it's a character flaw. But it did
-            teach me more about systems and feedback loops than any business
-            book.
+            The gaming thing isn&apos;t a flex, it&apos;s a character flaw. But
+            it did teach me more about systems and feedback loops than any
+            business book.
           </div>
 
           <div className="space-y-6 pt-4">

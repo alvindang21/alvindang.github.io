@@ -11,7 +11,7 @@ export function InfoPanel() {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <button className="font-mono text-[0.75rem] tracking-widest uppercase text-tertiary transition-colors hover:text-accent">
+        <button className="font-mono text-[0.75rem] tracking-widest uppercase text-text-tertiary transition-colors hover:text-accent">
           Info
         </button>
       </SheetTrigger>
@@ -37,7 +37,7 @@ export function InfoPanel() {
             an amateur barista and aggressively mediocre home cook.
           </p>
 
-          <div className="font-mono text-[0.8rem] text-tertiary leading-loose pl-4 border-l-2 border-border">
+          <div className="font-mono text-[0.8rem] text-text-tertiary leading-loose pl-4 border-l-2 border-border">
             The gaming thing isn't a flex, it's a character flaw. But it did
             teach me more about systems and feedback loops than any business
             book.
@@ -61,7 +61,7 @@ export function InfoPanel() {
           <div className="flex gap-16 pt-6 mt-8 border-t border-border">
             <a
               href="mailto:alvin@alvindang.com"
-              className="font-mono text-[0.8rem] text-secondary tracking-wide transition-colors hover:text-accent"
+              className="font-mono text-[0.8rem] text-text-secondary tracking-wide transition-colors hover:text-accent"
             >
               Email
             </a>
@@ -69,7 +69,7 @@ export function InfoPanel() {
               href="https://linkedin.com/in/alvindang"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-mono text-[0.8rem] text-secondary tracking-wide transition-colors hover:text-accent"
+              className="font-mono text-[0.8rem] text-text-secondary tracking-wide transition-colors hover:text-accent"
             >
               LinkedIn
             </a>
@@ -83,10 +83,10 @@ export function InfoPanel() {
 function InfoSection({ label, value }: { label: string; value: string }) {
   return (
     <div>
-      <div className="font-mono text-[0.7rem] tracking-widest uppercase text-tertiary mb-1">
+      <div className="font-mono text-[0.7rem] tracking-widest uppercase text-text-tertiary mb-1">
         {label}
       </div>
-      <div className="text-[0.95rem] text-secondary leading-relaxed">
+      <div className="text-[0.95rem] text-text-secondary leading-relaxed">
         {value}
       </div>
     </div>

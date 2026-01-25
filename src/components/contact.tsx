@@ -30,7 +30,7 @@ function ContactLink({
     <a
       href={href}
       {...(external && { target: "_blank", rel: "noopener noreferrer" })}
-      className="inline-flex items-center gap-2 font-mono text-[0.85rem] tracking-wide text-secondary transition-colors hover:text-accent group"
+      className="inline-flex items-center gap-2 font-mono text-[0.85rem] tracking-wide text-text-secondary transition-colors hover:text-accent group"
     >
       <span className="opacity-0 -translate-x-2.5 transition-all group-hover:opacity-100 group-hover:translate-x-0">
         →

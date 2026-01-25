@@ -13,19 +13,29 @@ export function Nav() {
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
-    const footer = document.querySelector("footer");
-    if (!footer) return;
+    let observer: IntersectionObserver | null = null;
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsVisible(!entry.isIntersecting);
-      },
-      { threshold: 0, rootMargin: "100px" }
-    );
+    const setupObserver = () => {
+      const footer = document.querySelector("footer");
+      if (!footer) return false;
 
-    observer.observe(footer);
+      observer = new IntersectionObserver(
+        ([entry]) => {
+          setIsVisible(!entry.isIntersecting);
+        },
+        { threshold: 0, rootMargin: "100px" }
+      );
 
-    return () => observer.disconnect();
+      observer.observe(footer);
+      return true;
+    };
+
+    if (!setupObserver()) {
+      const retryId = requestAnimationFrame(setupObserver);
+      return () => cancelAnimationFrame(retryId);
+    }
+
+    return () => observer?.disconnect();
   }, []);
 
   return (

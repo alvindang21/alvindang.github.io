@@ -1,62 +1,47 @@
 export interface Experience {
-  company: string;
+  year: number;
   role: string;
-  years: string;
-  description: string;
+  company: string;
   url: string;
-  logo: "relay" | "homebase" | "wealthsimple" | "shopify" | "blackberry";
-  current?: boolean;
-  highlights?: string[];
+  tagline: string;
 }
 
 export const experience: Experience[] = [
   {
+    year: 2025,
+    role: "Director of Lifecycle Marketing",
     company: "Relay",
-    role: "Director, Lifecycle Marketing",
-    years: "2024–Present",
-    description:
-      "Building growth systems for SMB fintech. Leading lifecycle strategy across onboarding, activation, and retention.",
     url: "https://relayfi.com",
-    logo: "relay",
-    current: true,
+    tagline: "a financial platform built for small-business owners.",
   },
   {
+    year: 2022,
+    role: "Director of Lifecycle Marketing",
     company: "Homebase",
-    role: "Director, Lifecycle Marketing",
-    years: "2022–2024",
-    description:
-      "Built Lifecycle and Top-of-Funnel functions from scratch. Helped secure $60M Series D through growth initiatives.",
     url: "https://joinhomebase.com",
-    logo: "homebase",
-    highlights: ["$60M Series D"],
+    tagline: "a workforce platform for hourly teams.",
   },
   {
+    year: 2018,
+    role: "Head of Lifecycle Marketing",
     company: "Wealthsimple",
-    role: "Head of Lifecycle → Growth PM",
-    years: "2018–2022",
-    description:
-      "Scaled team from 1 to 15. Built TLDR newsletter, grew to 2B messages/year. Drove growth from $350M to $5B AUM.",
     url: "https://wealthsimple.com",
-    logo: "wealthsimple",
-    highlights: ["1→15 team", "2B msgs/yr", "$5B AUM"],
+    tagline:
+      "where I built the function from scratch and launched TLDR, a financial newsletter that became one of Canada's most-read.",
   },
   {
+    year: 2016,
+    role: "Marketing Automation",
     company: "Shopify",
-    role: "Marketing Automation Specialist",
-    years: "2016–2018",
-    description:
-      "Global lifecycle programs for Shopify Core, Capital, and Shipping. Post-IPO growth phase.",
     url: "https://shopify.com",
-    logo: "shopify",
-    highlights: ["Post-IPO"],
+    tagline:
+      "part of the original growth team scaling the platform through its post-IPO era.",
   },
   {
+    year: 2013,
+    role: "Marketing Specialist",
     company: "BlackBerry",
-    role: "Marketing Specialist, CRM",
-    years: "2013–2014",
-    description:
-      "BB10 Global Welcome program. Early career foundation in CRM and lifecycle marketing.",
     url: "https://blackberry.com",
-    logo: "blackberry",
+    tagline: "when the smartphone they made was still the one everyone wanted.",
   },
 ];

@@ -3,137 +3,106 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@font-face {
+  font-family: "GT Sectra";
+  src: url("/fonts/GT-Sectra-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "GT Sectra";
+  src: url("/fonts/GT-Sectra-Regular-Italic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "GT Sectra";
+  src: url("/fonts/GT-Sectra-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "GT Sectra";
+  src: url("/fonts/GT-Sectra-Bold-Italic.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
-  --color-popover: var(--popover);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-secondary: var(--secondary);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-destructive: var(--destructive);
-  --color-border: var(--border);
-  --color-input: var(--input);
-  --color-ring: var(--ring);
+  --color-soft: var(--soft);
+  --color-rule: var(--rule);
+  --color-warm: var(--warm);
 
-  --color-text-secondary: var(--text-secondary);
-  --color-text-tertiary: var(--text-tertiary);
-  --color-bg-subtle: var(--bg-subtle);
-
-  --font-sans: var(--font-dm-sans);
-  --font-serif: var(--font-cormorant);
-  --font-mono: var(--font-ibm-plex);
-
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-
-  --spacing-xs: 0.5rem;
-  --spacing-sm: 1rem;
-  --spacing-md: 2rem;
-  --spacing-lg: 4rem;
-  --spacing-xl: 8rem;
-  --spacing-2xl: 12rem;
+  --font-sans: var(--font-gt-sectra);
+  --font-serif: var(--font-fraunces);
 }
 
 :root {
-  --radius: 0.5rem;
+  /* Light — bone on ink, warm sienna accent */
+  --background: #E8E5DC;
+  --foreground: #151513;
+  --soft: #807A6E;
+  --rule: #BFB9A8;
+  --warm: #5E3E22;
 
-  /* Warm luxury palette - Light mode */
-  --background: #F4F1EB;
-  --foreground: #1C1C1C;
-  --bg-subtle: #EBE7DF;
-  --text-secondary: #5C5C5C;
-  --text-tertiary: #8A8A8A;
-
-  --card: #F4F1EB;
-  --card-foreground: #1C1C1C;
-  --popover: #F4F1EB;
-  --popover-foreground: #1C1C1C;
-
-  --primary: #1C1C1C;
-  --primary-foreground: #F4F1EB;
-
-  --secondary: #EBE7DF;
-  --secondary-foreground: #1C1C1C;
-
-  --muted: #EBE7DF;
-  --muted-foreground: #5C5C5C;
-
-  --accent: #8B7355;
-  --accent-foreground: #F4F1EB;
-
-  --destructive: #dc2626;
-
-  --border: #DDD9D0;
-  --input: #DDD9D0;
-  --ring: #8B7355;
+  --font-gt-sectra: "GT Sectra", Georgia, "Times New Roman", serif;
 }
 
 .dark {
-  /* Warm luxury palette - Dark mode */
-  --background: #1A1918;
-  --foreground: #F5F4F1;
-  --bg-subtle: #242220;
-  --text-secondary: #A8A5A0;
-  --text-tertiary: #6B6866;
-
-  --card: #242220;
-  --card-foreground: #F5F4F1;
-  --popover: #242220;
-  --popover-foreground: #F5F4F1;
-
-  --primary: #F5F4F1;
-  --primary-foreground: #1A1918;
-
-  --secondary: #242220;
-  --secondary-foreground: #F5F4F1;
-
-  --muted: #242220;
-  --muted-foreground: #A8A5A0;
-
-  --accent: #C4A882;
-  --accent-foreground: #1A1918;
-
-  --destructive: #ef4444;
-
-  --border: #333130;
-  --input: #333130;
-  --ring: #C4A882;
+  /* Graphite on cream, warm ochre accent */
+  --background: #17161B;
+  --foreground: #EAE4D3;
+  --soft: #8E8571;
+  --rule: #3A372F;
+  --warm: #E6B88A;
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
-
   html {
     scroll-behavior: smooth;
+    font-size: 21px;
   }
 
   body {
-    @apply bg-background text-foreground antialiased;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-gt-sectra);
     font-weight: 300;
-    line-height: 1.6;
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: -0.005em;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    transition: background 0.4s ease, color 0.4s ease;
   }
 
   ::selection {
-    @apply bg-foreground text-background;
+    background: var(--foreground);
+    color: var(--background);
+  }
+
+  em,
+  i {
+    font-style: italic;
+  }
+
+  @media (max-width: 640px) {
+    html {
+      font-size: 19px;
+    }
   }
 }
 
-/* Custom animations */
-@keyframes reveal-name {
+@keyframes rise {
   from {
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(6px);
   }
   to {
     opacity: 1;
@@ -141,53 +110,23 @@
   }
 }
 
-@keyframes fade-up {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.animate-rise {
+  animation: rise 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) both;
 }
 
-@keyframes scroll-line {
-  0%, 100% {
-    opacity: 0.3;
-    height: 40px;
-  }
-  50% {
-    opacity: 1;
-    height: 60px;
-  }
+.link-bloom {
+  color: var(--warm);
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  padding: 0;
+  display: inline;
+  letter-spacing: 0;
+  transition:
+    letter-spacing 0.45s cubic-bezier(0.2, 0.8, 0.2, 1),
+    color 0.25s ease;
 }
 
-@keyframes pulse-dot {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.4;
-  }
-}
-
-.animate-reveal-name {
-  animation: reveal-name 1s ease-out;
-}
-
-.animate-fade-up {
-  animation: fade-up 1s ease-out backwards;
-}
-
-.animate-fade-up-delay {
-  animation: fade-up 1s ease-out 0.3s backwards;
-}
-
-.animate-scroll-line {
-  animation: scroll-line 2s ease-in-out infinite;
-}
-
-.animate-pulse-dot {
-  animation: pulse-dot 2s ease-in-out infinite;
+.link-bloom:hover {
+  letter-spacing: 0.04em;
 }
